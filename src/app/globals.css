@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: sfprobold;
+  src: url("../font/sfprobold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: sfpromedium;
+  src: url("../font/sfpromedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: sfpregular;
+  src: url("../font/SF-Pro.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: NEO;
+  src: url("../font/NEOPIXEL-Regular.otf") format("opentype");
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: black;
+  font-family: sfpregular;
+  background-color: black;
+}
+
+.transition-fade-enter {
+  opacity: 0;
+}
+
+.transition-fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.transition-fade-exit {
+  opacity: 1;
+}
+
+.transition-fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.font-NEO {
+  font-family: NEO;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fadeIn ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.home-fade-In {
+  opacity: 1;
+  animation: home_fadeIn ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1000ms;
+}
+
+.home_fade_In_R {
+  opacity: 1;
+  animation: home_fadeIn_R ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1000ms;
+}
+
+.home_fade_In_L {
+  opacity: 1;
+  animation: home_fadeIn_L ease-in-out 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1000ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes home_fadeIn_L {
+  from {
+    opacity: 0.8;
+    margin-left: 10px;
+  }
+
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@keyframes home_fadeIn_R {
+  from {
+    opacity: 0.8;
+    margin-right: 10px;
+  }
+
+  to {
+    opacity: 1;
+    margin-right: 0px;
+  }
+}
+
+/* .fade-out {
+  opacity: 1;
+  animation: fadeIn ease-out 0;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+ } */
+
+
+.studio_shadow {
+  text-shadow: 0px 0px 6.21931791305542px #DADADA, 0px 0px 12.43863582611084px #DADADA, 0px 0px 43.53522491455078px #DADADA, 0px 0px 87.07044982910156px #DADADA, 0px 0px 149.2636260986328px #DADADA, 0px 0px 261.21136474609375px #DADADA;
+}
+
+.mint-btn>div {
+  height: 100%;
+}
+
+.screen_show {
+  /* opacity: 0; */
+  display: none;
+}
+
+.screen_hidden {
+  /* opacity: 1; */
+  display: block;
+}
+
+
+@media screen and (min-width: 800px) {
+  .screen_show {
+    /* opacity: 1 !important; */
+    display: block;
+  }
+
+  .screen_hidden {
+    /* opacity: 0; */
+    display: none;
+  }
+}
+
+.Toastify__toast-theme--light {
+  background: rgb(62 62 62) !important;
+  color: rgb(250 249 246) !important;
+}
+
+.Toastify__close-button--light {
+  color: rgb(250 249 246) !important;
+}
